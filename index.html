@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>J Query</title>
+	<script type="text/javascript" src="F:\ed Systango\bootstrap\bootstrap-4.4.1-dist\jquery\jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#did").hide(); $("#mid").hide(); $("#sid").hide();
+			$("#des").change(function(){
+				var desig=$("#des").val();
+				if(desig=="Developer")
+				{
+					$("#did").show(); $("#mid").hide(); $("#sid").hide();
+				}
+				else if(desig=="Manager")
+				{
+					$("#did").hide(); $("#mid").show(); $("#sid").hide();
+				}
+				else if(desig=="Support")
+				{
+					$("#did").hide(); $("#mid").hide(); $("#sid").show();
+				}
+				else
+				{
+					$("#did").hide(); $("#mid").hide(); $("#sid").hide();
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	<center>
+	<table border="0">
+		<tr>
+			<td>Designation</td><td><select id="des">
+				<option>-Select-</option>
+				<option>Developer</option>
+				<option>Manager</option>
+				<option>Support</option>
+			</select></td>
+		</tr>
+		<tr id="did"><td>Developer ID</td><td><input type="text"></td></tr>
+		<tr id="mid"><td>Manager ID</td><td><input type="text"></td></tr>
+		<tr id="sid"><td>Support ID</td><td><input type="text"></td></tr>
+	</table>
+	</center>
+</body>
+</html>

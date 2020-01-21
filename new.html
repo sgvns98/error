@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>J Query</title>
+	<script type="text/javascript" src="F:\ed Systango\bootstrap\bootstrap-4.4.1-dist\jquery\jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#oldadd').click(function(){
+				if($('#oldadd').prop('checked')==true)
+				{
+					$("#check").hide()
+				}
+				else if($('#oldadd').prop('checked')==false)
+				{
+					$("#check").show()
+				}
+					
+			})
+		})
+	</script>
+</head>
+<body>
+	<center>
+	<table border="0">
+		<tr>
+			<td>Same as contact address</td><td><input type="checkbox" id="oldadd" name=""></td>
+		</tr>
+		<tr id="check"><td>Enter new address</td><td><input type="text"></td></tr>
+		
+	</table>
+	</center>
+</body>
+</html>
